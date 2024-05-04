@@ -7,7 +7,7 @@ setup(
     url='https://github.com/AnhNguyen20695/sit727-project-common.git',
     author='Felix Nguyen',
     author_email='s222521972@deakin.edu.au',
-    packages=['pyexample'],
+    packages=['sit727-utilities'],
     install_requires=['mysql-connector-python==8.3.0',
                       'pandas==2.2.2',                     
                       ],
