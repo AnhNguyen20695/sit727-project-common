@@ -1,13 +1,13 @@
 from setuptools import setup
 
 setup(
-    name='sit727-utilities',
-    version='0.1.0',    
+    name='utilities',
+    version='1.0.0',    
     description='A package for common utilities in sit727 project',
     url='https://github.com/AnhNguyen20695/sit727-project-common.git',
     author='Felix Nguyen',
     author_email='s222521972@deakin.edu.au',
-    packages=['sit727-utilities'],
+    packages=['utilities'],
     install_requires=['mysql-connector-python==8.3.0',
                       'pandas==2.2.2',                     
                       ],
