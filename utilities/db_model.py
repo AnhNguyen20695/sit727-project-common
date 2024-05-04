@@ -1,0 +1,33 @@
+import mysql.connector
+from .config import *
+import pandas as pd
+
+
+class MySQL_Database():
+    def __init__(self, mode='read', env='dev'):
+        conf = HOST_CONFIG[env]
+        self.db_connection = mysql.connector.connect(
+                                            host=conf['DATABASE'][mode]["DB_HOST"],
+                                            port=conf['DATABASE'][mode]["DB_PORT"],
+                                            user=conf['DATABASE'][mode]["DB_USER"],
+                                            password=conf['DATABASE'][mode]["DB_PASSWORD"]
+                                        )
+    
+    def execute_query(self, query, mode="read"):
+        #Saving the Actions performed on the DB
+        if mode=="read":
+            result = pd.read_sql(query, self.db_connection)
+        if mode=="write":
+            #Creating a connection cursor
+            cursor = self.db_connection.cursor()
+
+            #Executing SQL Statements
+            result = cursor.execute(query)
+            self.db_connection.commit()
+
+        # #Closing the cursor
+        # cursor.close()
+        return result
+    
+    def close_connection(self):
+        self.db_connection.close()
