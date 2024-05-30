@@ -4,7 +4,7 @@ HOST_CONFIG = {
     'dev': {
         'DATABASE': {
             'primary': {
-                'HOST': 'mysql-0.mysql',
+                'HOST': 'mysql-0.mysql.default.svc.cluster.local',
                 'PORT': 3306,
                 'USER': 'root',
                 'PASSWORD': 'admin',
@@ -22,7 +22,7 @@ HOST_CONFIG = {
     'prod': {
         'DATABASE': {
             'primary': {
-                'HOST': 'mysql-0.mysql',
+                'HOST': 'mysql-0.mysql.default.svc.cluster.local',
                 'PORT': 3306,
                 'USER': 'root',
                 'PASSWORD': 'admin',
