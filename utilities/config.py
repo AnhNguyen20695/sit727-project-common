@@ -10,7 +10,7 @@ HOST_CONFIG = {
                 'PASSWORD': 'admin',
             },
             'read': {
-                'HOST': 'mysql-read.default.svc.cluster.local',
+                'HOST': 'mysql-0.mysql.default.svc.cluster.local',
                 'PORT': 3306,
                 'USER': 'root',
                 'PASSWORD': 'admin',
@@ -28,7 +28,7 @@ HOST_CONFIG = {
                 'PASSWORD': 'admin',
             },
             'read': {
-                'HOST': 'mysql-read.default.svc.cluster.local',
+                'HOST': 'mysql-0.mysql.default.svc.cluster.local',
                 'PORT': 3306,
                 'USER': 'root',
                 'PASSWORD': 'admin',
